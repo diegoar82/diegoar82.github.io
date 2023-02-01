@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+body {
+    background-color: #2978a0;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #1b3039;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    padding: 5px 10%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.header .foto {
+    cursor: pointer;
+}
+
+.header .foto img {
+    height: 100px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .foto img:hover {
+    transform: scale(1.2);
+}
+
+.header .navegacion {
+    list-style: none;
+}
+
+.header .navegacion li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .navegacion li:hover {
+    transform: scale(1.1);
+}
+
+.header .navegacion a {
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;
+}
+
+.header .navegacion li a:hover {
+    color: yellow;
+}
+
+.main {
+   margin-top: 140px;
+}
+
+.main h1 {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.main h2 {
+    color: white;
+    font-weight: bold;
+    text-align: right;
+}
+
+.main p {
+    color: white;
+    font-size: 17px;
+    text-align: center;  
+    padding: 25px;
+}
+
+.main fieldset {
+    margin-top: 100px;
+}
+
+.main legend {
+    background-color: #77567a;
+    padding: 5px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.main span {
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #1b3039;
+    padding: 25px;
+}
+
+.footer p {
+    color: white;
+    font-size: 17px;
+    text-align: center;  
+    
+}
+
+
+/*Boton en JS*/
+
+.go-top-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 66px;
+    height: 66px;
+    z-index: -1;
+}
+
+.go-top-button {
+    width: 0;
+    height: 0;
+    background: orangered;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button i {
+    position: absolute;
+    font-size: 17px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: 0.2s;
+}
+
+.show {
+    z-index: 10;
+}
+
+.show .go-top-button {
+    animation: popup 0.3s ease-in-out;
+    width: 66px;
+    height: 66px;
+    z-index: 11;
+}
+
+.show i {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    50%{
+        width: 80px;
+        height: 80px;
+    }
+    100%{
+        width: 66px;
+        height: 66px;
+    }
+}
